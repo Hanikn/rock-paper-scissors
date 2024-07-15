@@ -17,7 +17,7 @@ function getHumanChoice() {
       return "Scissors";
     default:
       console.log("Invalid choice. Please enter Rock, Paper or Scissors.");
-      return getHumanChoice(); // Повторно запрашиваем выбор, если ввод некорректный
+      return getHumanChoice();
   }
 }
 
