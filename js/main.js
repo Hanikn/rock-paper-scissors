@@ -23,11 +23,9 @@ function playRound(humanChoice) {
     resultMessage = "You lose!";
   }
 
-  //DISPLAYING RESULT//
-  let resultDiv = document.getElementById("result");
-  resultDiv.textContent(
-    `${resultMessage} You chose ${humanChoice}, computer chose ${computerChoice}.`
-  );
+  // Displaying the result
+  const resultDiv = document.getElementById("result");
+  resultDiv.textContent = `You chose: ${humanChoice}. Computer chose: ${computerChoice}. ${resultMessage}`;
 }
 
 //EVENT LISTENERS//
