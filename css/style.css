@@ -1,0 +1,111 @@
+body {
+    background: rgb(63, 94, 251);
+        background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    color: #7D29EA;
+    text-shadow:
+            2px 2px 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            0 2px 0 #000,
+            0 -2px 0 #000,
+            2px 0 0 #000,
+            -2px 0 0 #000;
+    font-family: "Spicy Rice", serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+.result {
+    margin-bottom: 15px;
+}
+
+.score {
+    font-weight: bold;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    font-family: "Spicy Rice", serif;
+    font-weight: 400;
+    font-size: 80px;
+    font-style: normal;
+    color: #7D29EA;
+    text-shadow:
+            2px 2px 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            0 2px 0 #000,
+            0 -2px 0 #000,
+            2px 0 0 #000,
+            -2px 0 0 #000;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    gap: 120px;
+}
+
+.game-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.game-button img {
+    display: block;
+    width: 200px;
+    height: auto;
+}
+
+@keyframes bounce-up {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.game-button:hover img {
+    animation: bounce-up 0.3s ease;
+}
+
+@keyframes bounce-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.game-button:active img {
+    animation: bounce-down 0.2s ease;
+}
