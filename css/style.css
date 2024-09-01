@@ -109,3 +109,48 @@ body {
 .game-button:active img {
     animation: bounce-down 0.2s ease;
 }
+
+@media (max-width: 768px) {
+    .heading {
+        font-size: 50px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        padding-top: 40px;
+        gap: 60px;
+    }
+
+    .game-button img {
+        width: 150px;
+    }
+
+    .result-container {
+        font-size: 20px;
+        margin-top: 30px;
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .button-container {
+        flex-direction: column;
+        gap: 30px;
+        padding-left: 30%;
+    }
+
+    .game-button img {
+        width: 150px;
+    }
+
+    .heading {
+        font-size: 50px;
+    }
+
+    .result-container {
+        margin-top: 30px;
+        padding: 15px;
+        font-size: 20px;
+    }
+}
