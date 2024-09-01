@@ -1,3 +1,40 @@
+body {
+    background: rgb(63, 94, 251);
+        background: linear-gradient(90deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%);
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    color: #7D29EA;
+    text-shadow:
+            2px 2px 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            0 2px 0 #000,
+            0 -2px 0 #000,
+            2px 0 0 #000,
+            -2px 0 0 #000;
+    font-family: "Spicy Rice", serif;
+    font-size: 24px;
+    text-align: center;
+}
+
+.result {
+    margin-bottom: 15px;
+}
+
+.score {
+    font-weight: bold;
+}
+
 .heading {
     display: flex;
     justify-content: center;
@@ -8,73 +45,67 @@
     color: #7D29EA;
     text-shadow:
             2px 2px 0 #000,
-            /* Черная тень для создания эффекта обводки */
             -2px -2px 0 #000,
-            /* Обводка слева-вверх */
             2px -2px 0 #000,
-            /* Обводка справа-вверх */
             -2px 2px 0 #000,
-            /* Обводка слева-вниз */
             0 2px 0 #000,
-            /* Добавление вертикальных теней */
             0 -2px 0 #000,
-            /* Обводка сверху и снизу */
             2px 0 0 #000,
-            /* Добавление горизонтальных теней */
             -2px 0 0 #000;
-        /* Обводка по бокам */
 }
 
 .button-container {
     display: flex;
     justify-content: center;
     padding-top: 80px;
-    /* Центрирует кнопки по горизонтали */
     gap: 120px;
-    /* Задает отступ между кнопками */
 }
 
 .game-button {
     background: none;
-    /* Убирает фон кнопки */
     border: none;
-    /* Убирает границы кнопки */
     padding: 0;
-    /* Убирает внутренние отступы кнопки */
     cursor: pointer;
-    /* Меняет курсор на указатель при наведении */
 }
 
 .game-button img {
     display: block;
-    /* Убирает пробелы под изображением */
     width: 200px;
-    /* Ширина изображения, можно настроить под ваши нужды */
     height: auto;
-    /* Автоматическая высота для сохранения пропорций */
 }
 
-
-/* Определение анимации */
-@keyframes bounce {
+@keyframes bounce-up {
     0% {
         transform: translateY(0);
-        /* Начальная позиция */
     }
 
     50% {
         transform: translateY(-10px);
-        /* Подпрыгивание */
     }
 
     100% {
         transform: translateY(0);
-        /* Возвращение в исходное положение */
     }
 }
 
-/* Применение анимации при наведении */
 .game-button:hover img {
-    animation: bounce 0.3s ease;
-    /* Применение анимации к изображению */
+    animation: bounce-up 0.3s ease;
+}
+
+@keyframes bounce-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.game-button:active img {
+    animation: bounce-down 0.2s ease;
 }
